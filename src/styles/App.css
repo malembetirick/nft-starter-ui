@@ -35,6 +35,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+.opensea {
+  margin-top: 1.5em;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  height: 45px;
+  cursor: pointer;
+}
+
 .cta-button {
   height: 45px;
   border: 0;
@@ -61,8 +70,14 @@
   margin-right: 15px;
 }
 
-.opensea-button {
+.opensea-button a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
   background-color: rgb(32, 129, 226);
+  background-size: 200% 200%;
+  border-radius: 5px;
+  width: auto;
+  padding: 15px;
 }
 
 .mint-count {
@@ -122,4 +137,47 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.spinonediv-3 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: spinner-3--border-opacity 0.7s linear infinite;
+  animation: spinner-3--border-opacity 0.7s linear infinite;
+  -webkit-animation-delay: 0.24s;
+  animation-delay: 0.24s;
+}
+
+.spinonediv-3:before, .spinonediv-3:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  -webkit-animation: spinner-3--border-opacity 0.7s linear infinite;
+  animation: spinner-3--border-opacity 0.7s linear infinite;
+}
+
+.spinonediv-3:before {
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+}
+
+.spinonediv-3:after {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-animation-delay: 0.12s;
+  animation-delay: 0.12s;
 }
